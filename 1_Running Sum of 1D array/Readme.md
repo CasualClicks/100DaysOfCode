@@ -1,6 +1,6 @@
 
-# Finding Running Sum of 1D array
-
+# Finding running sum of 1D Array
+```
 class Solution {
     public int[] runningSum(int[] nums) 
     {
@@ -13,6 +13,6 @@ class Solution {
 
         return nums;
     }
-}
-
-<h3> Time Complexity: O(n) </h3>
+} 
+```
+<h5> Time Complexity: <em>O(n)</em> </h5>
