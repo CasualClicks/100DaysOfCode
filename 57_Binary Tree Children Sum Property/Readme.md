@@ -1,23 +1,16 @@
 # Given a Binary Tree, state whether they foloow children sum property. i.e., sum of children == node
 ```
-void printLeft(Node root)
+boolean childrenSum(Node root)
 {
-    if(root==null)return;
-    Queue<Node> q = new LinkedList<>();
+    if(root==null)return true;
+    if(root.left==null && root.right==null)
+        return true;
 
-    q.add(root);
+    int sum=0;
+    if(root.left!=null){sum+=root.left.value;}
+    if(root.right!+null){sum+=root.right.value};
 
-    while(!q.isEmpty())
-    {
-        int s = q.size();
-        for(int i=0; i<s; i++)
-        {
-            Node curr = q.poll();
-            if(i==0)System.out.print("curr.value");
-            if(curr.left!=null)q.add(curr.left);
-            if(curr.right!=null)q.add(curr.right);
-        }
-    }
+    return(root.value==sum) && childrenSum(root.left) && childrenSum(root.right);
 }
 
 ```
